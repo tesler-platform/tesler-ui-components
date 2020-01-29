@@ -1,5 +1,6 @@
 {
-  "name": "my-app",
+  "name": "@tesler-ui/components",
+  "homepage": "https://tesler-platform.github.io/tesler-ui-components/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

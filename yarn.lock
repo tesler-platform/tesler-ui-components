@@ -1761,6 +1761,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tesler-ui/components@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@tesler-ui/components@workspace:."
+  dependencies:
+    "@testing-library/jest-dom": ^4.2.4
+    "@testing-library/react": ^9.3.2
+    "@testing-library/user-event": ^7.1.2
+    "@types/jest": ^24.0.0
+    "@types/node": ^12.0.0
+    "@types/react": ^16.9.0
+    "@types/react-dom": ^16.9.0
+    react: ^16.12.0
+    react-dom: ^16.12.0
+    react-scripts: 3.3.0
+    typescript: ~3.7.2
+  languageName: unknown
+  linkType: soft
+
 "@testing-library/dom@npm:^6.11.0":
   version: 6.12.0
   resolution: "@testing-library/dom@npm:6.12.0"
@@ -8811,24 +8829,6 @@ fsevents@^1.2.7:
   checksum: 1951ec52b1ea2d0e3cc46eee5dc00ac7ad75331f47e7e9ab695a7771d2ebe6348ab6742ec2d15f914214c35e342da05ba41392e5889f6fbb96f065acccdbe0fc
   languageName: node
   linkType: hard
-
-"my-app@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "my-app@workspace:."
-  dependencies:
-    "@testing-library/jest-dom": ^4.2.4
-    "@testing-library/react": ^9.3.2
-    "@testing-library/user-event": ^7.1.2
-    "@types/jest": ^24.0.0
-    "@types/node": ^12.0.0
-    "@types/react": ^16.9.0
-    "@types/react-dom": ^16.9.0
-    react: ^16.12.0
-    react-dom: ^16.12.0
-    react-scripts: 3.3.0
-    typescript: ~3.7.2
-  languageName: unknown
-  linkType: soft
 
 "nan@npm:^2.12.1":
   version: 2.14.0
