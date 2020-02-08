@@ -3,7 +3,7 @@ import Table from './Table'
 
 export default {
     component: Table,
-    title: 'Table',
+    title: 'Components|Table',
 };
 
 export const basicExample = () => {
