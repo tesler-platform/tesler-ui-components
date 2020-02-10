@@ -1,7 +1,7 @@
 import React from 'react'
 import {Table as AntTable, Dropdown} from 'antd'
 import cn from 'classnames'
-import styles from './Table.module.less'
+import styles from './Table.module.css'
 
 export interface TableProps {
     /**
@@ -15,7 +15,7 @@ export interface TableProps {
     /**
      * Actions panel will be shown for each row
      */
-    showRowActions?: boolean
+    rowActions?: React.ReactNode
 }
 
 /**
@@ -28,24 +28,24 @@ export const Table: React.FC<TableProps> = (props) => {
             className={cn(
                 styles.table,
                 {
-                    [styles.tableWithRowMenu]: props.showRowActions
+                    [styles.tableWithRowMenu]: !!props.rowActions
                 },
                 props.className
             )}
             dataSource={props.data}
         />
-        { props.showRowActions &&
+        { props.rowActions &&
             <div
                 ref={floatMenuRef}
                 className={styles.floatMenu}
-                onMouseLeave={onFloatMenuMouseLeave}
+                /* onMouseLeave={onFloatMenuMouseLeave} */
             >
                 <Dropdown
                     placement="bottomRight"
                     trigger={['click']}
-                    onVisibleChange={onMenuVisibilityChange}
-                    overlay={rowActionsMenu}
-                    getPopupContainer={trigger => trigger.parentElement}
+                    /* onVisibleChange={onMenuVisibilityChange} */
+                    overlay={props.rowActions}
+                    /* getPopupContainer={trigger => trigger.parentElement} */
                 >
                     <div className={styles.dots}>...</div>
                 </Dropdown>
@@ -56,7 +56,7 @@ export const Table: React.FC<TableProps> = (props) => {
 
 Table.defaultProps = {
     data: [],
-    showRowActions: false
+    rowActions: undefined
 }
 
 export default Table

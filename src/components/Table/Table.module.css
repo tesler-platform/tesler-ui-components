@@ -11,8 +11,6 @@
     background: #fff;
 }
 
-.tableWithRowMenu {
-    tbody td:last-child {
-        padding-right: 30px;
-    }
+.tableWithRowMenu tbody td:last-child {
+    padding-right: 30px;
 }
