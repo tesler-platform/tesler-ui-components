@@ -18,6 +18,14 @@ module.exports = {
               }
           ],
         })
+        config.module.rules.push({
+          test: /\.less$/,
+          use: [
+              { loader: 'style-loader' },
+              { loader: 'css-loader', options: { modules: false } },
+              { loader: 'less-loader', options: { javascriptEnabled: true }}
+          ]
+        })
         config.resolve.extensions.push('.ts', '.tsx');
         return config
     },
